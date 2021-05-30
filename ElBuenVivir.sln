@@ -3,7 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElBuenVivir", "ElBuenVivir\ElBuenVivir.csproj", "{27BF84BD-8831-4A53-A4C7-9B4FE1DA0AA2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElBuenVivir", "ElBuenVivir\ElBuenVivir.csproj", "{27BF84BD-8831-4A53-A4C7-9B4FE1DA0AA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElBuenVivirTesting", "ElBuenVivirTesting\ElBuenVivirTesting.csproj", "{319A61C5-5ED3-40B1-9B29-B53EFF4760C3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{27BF84BD-8831-4A53-A4C7-9B4FE1DA0AA2} = {27BF84BD-8831-4A53-A4C7-9B4FE1DA0AA2}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +20,10 @@ Global
 		{27BF84BD-8831-4A53-A4C7-9B4FE1DA0AA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27BF84BD-8831-4A53-A4C7-9B4FE1DA0AA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27BF84BD-8831-4A53-A4C7-9B4FE1DA0AA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{319A61C5-5ED3-40B1-9B29-B53EFF4760C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{319A61C5-5ED3-40B1-9B29-B53EFF4760C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{319A61C5-5ED3-40B1-9B29-B53EFF4760C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{319A61C5-5ED3-40B1-9B29-B53EFF4760C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

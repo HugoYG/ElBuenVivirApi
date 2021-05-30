@@ -26,11 +26,11 @@ namespace ElBuenVivir.Controllers
         public IEnumerable Get()
         {
             var secretarias = (from u in context.Secretarias
-                               select new{
-                                   id = u.id_Secretaria,
-                                   Nombre = u.S_Nombre,
-                                   Password = u.S_Password,
-                                   Email = u.S_Email
+                               select new Secretaria{
+                                   id_Secretaria = u.id_Secretaria,
+                                   S_Nombre = u.S_Nombre,
+                                   S_Password = u.S_Password,
+                                   S_Email = u.S_Email
                                });
             return secretarias;
         }
@@ -41,12 +41,12 @@ namespace ElBuenVivir.Controllers
             int _id = int.Parse(id);
             var secretaria = (from s in context.Secretarias
                               where s.id_Secretaria == _id
-                              select new
+                              select new Secretaria
                               {
-                                  id = s.id_Secretaria,
-                                  Nombre = s.S_Nombre,
-                                  Password = s.S_Password,
-                                  Email = s.S_Email
+                                  id_Secretaria = s.id_Secretaria,
+                                  S_Nombre = s.S_Nombre,
+                                  S_Password = s.S_Password,
+                                  S_Email = s.S_Email
                               });
             return secretaria;
         }
@@ -57,7 +57,7 @@ namespace ElBuenVivir.Controllers
             if (secret.S_Email == null || secret.S_Password == null) return BadRequest(new { message = "Username or password empty" });
             else
             {
-                var _secretaria = context.Secretarias.FirstOrDefault(s => s.S_Email == secret.S_Email);
+                var _secretaria = context.Secretarias.FirstOrDefault(s => s.S_Email == secret.S_Email && s.S_Password == secret.S_Password);
                 if(_secretaria != null)
                 {
                     return _secretaria;
