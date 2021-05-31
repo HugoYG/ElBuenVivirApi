@@ -13,7 +13,7 @@ namespace ElBuenVivir.Entities
         public string MNombre { get; set; }
         public string DUI { get; set; }
         public string Area_Especialidad { get; set; }
-        public string Horarios_Consulta { get; set; }
+        public int Horarios_Consulta { get; set; }
         public string Dias_Laborales { get; set; }
     }
 }

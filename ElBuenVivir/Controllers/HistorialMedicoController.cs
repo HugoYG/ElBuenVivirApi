@@ -23,15 +23,35 @@ namespace ElBuenVivir.Controllers
         [HttpGet]
         public IQueryable Get()
         {
-            var historial = (from h in context.Historial_Medico
-                             join u in context.PacienteR on h.id_paciente equals u.idPaciente
-                             join r in context.Recetas on h.id_receta equals r.idreceta
-                             join c in context.Citas on h.idCita equals c.id_Cita
+            var historial = (from c in context.Citas
+                             join u in context.PacientesR on c.id_Paciente equals u.idPaciente
                              join m in context.Medico on c.idMedico equals m.id_Medico
+                             where c.Registered == true
                              select new
                              {
-                                 id_cita = h.idCita,
-                                 id_paciente = h.id_paciente,
+                                 id_cita = c.id_Cita,
+                                 id_paciente = u.idPaciente,
+                                 nombre_Paciente = u.PNombre,
+                                 id_medico = m.id_Medico,
+                                 nombre_Medico = m.MNombre,
+                                 Sintomas = c.Sntomas,
+                                 Fecha = c.Fecha
+                             });
+            return historial;
+        }
+
+
+        [HttpGet("{id}")]
+        public IQueryable GetFilteredbyUser(int id)
+        {
+            var historial = (from c in context.Citas
+                             join u in context.PacientesR on c.id_Paciente equals u.idPaciente
+                             join m in context.Medico on c.idMedico equals m.id_Medico
+                             where u.idPaciente == id
+                             select new
+                             {
+                                 id_cita = c.id_Cita,
+                                 id_paciente = u.idPaciente,
                                  nombre_Paciente = u.PNombre,
                                  id_medico = m.id_Medico,
                                  nombre_Medico = m.MNombre,

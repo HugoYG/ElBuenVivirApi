@@ -16,8 +16,9 @@ namespace ElBuenVivir.Context
         public DbSet<HistorialMedico> Historial_Medico { get; set; }
         public DbSet<InfoAdmin> InfoAdmin { get; set; }
         public DbSet<Medico> Medico { get; set; }
-        public DbSet<PacienteNR> PacienteNR { get; set; }
-        public DbSet<PacientesR> PacienteR { get; set; }
+        public DbSet<PacienteNR> PacientesNR { get; set; }
+        public DbSet<Horarios> Horarios { get; set; }
+        public DbSet<PacientesR> PacientesR { get; set; }
         public DbSet<Recetas> Recetas { get; set; }
         public DbSet<Secretaria> Secretarias { get; set; }
 

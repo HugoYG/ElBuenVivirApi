@@ -61,3 +61,4 @@ C:\Users\PC\source\repos\ElBuenVivir\ElBuenVivir\obj\Debug\netcoreapp3.1\ElBuenV
 C:\Users\PC\source\repos\ElBuenVivir\ElBuenVivir\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
 C:\Users\PC\source\repos\ElBuenVivir\ElBuenVivir\bin\Debug\netcoreapp3.1\System.Web.Http.dll
 C:\Users\PC\source\repos\ElBuenVivir\ElBuenVivir\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\PC\source\repos\ElBuenVivir\ElBuenVivir\obj\Debug\netcoreapp3.1\ElBuenVivir.csprojAssemblyReference.cache

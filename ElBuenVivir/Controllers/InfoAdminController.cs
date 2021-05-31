@@ -59,6 +59,7 @@ namespace ElBuenVivir.Controllers
                                 id_Medico = i.id_Medico,
                                 Nombre_Medico = m.MNombre,
                                 Especialidad = m.Area_Especialidad,
+                                Dui_Medico = m.DUI,
                                 Dias_laborales = m.Dias_Laborales,
                                 Horarios = m.Horarios_Consulta
                             });

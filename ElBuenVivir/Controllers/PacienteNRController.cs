@@ -23,7 +23,7 @@ namespace ElBuenVivir.Controllers
         [HttpGet]
         public IQueryable Get()
         {
-            var pacientes = (from u in context.PacienteNR
+            var pacientes = (from u in context.PacientesNR
                              select new 
                              {
                                  Nombre = u.NRNombre,
@@ -37,7 +37,7 @@ namespace ElBuenVivir.Controllers
         [HttpPost]
         public async Task<ActionResult<PacienteNR>> Post([FromBody] PacienteNR paciente)
         {
-            context.PacienteNR.Add(paciente);
+            context.PacientesNR.Add(paciente);
             await context.SaveChangesAsync();
             return CreatedAtAction(nameof(Get), paciente);
         }
